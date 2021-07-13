@@ -1,2 +1,2 @@
 # BodywayAdmin
-bodyway dmin website
+bodyway admin website
