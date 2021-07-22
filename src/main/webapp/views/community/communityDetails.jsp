@@ -8,6 +8,6 @@
 <title>모임 정보 상세보기</title>
 </head>
 <body>
-
+	
 </body>
 </html>
