@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>memberList</title>
+<title>회원 정보 상세보기</title>
 </head>
 <body>
-<header>회원관리하기</header>
-<h2>회원 정보</h2>
 
 </body>
 </html>

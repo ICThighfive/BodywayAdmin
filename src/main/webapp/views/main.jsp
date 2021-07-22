@@ -38,7 +38,7 @@
 		<td><input type = "button" class = "button" onclick = "location.href = './community/communityList.jsp'" value = "공지사항 및 QnA 관리"></td>
 		</tr>
 		<tr>
-		<td><input type = "button" class = "button" onclick = "location.href = './community/communityList.jsp'" value = "홍보 업체 관리"></td>
+		<td><input type = "button" class = "button" onclick = "location.href = './advertisement/advertisementList.jsp'" value = "홍보 업체 관리"></td>
 		<td><input type = "button" class = "button" onclick = "location.href = './community/communityList.jsp'" value = "사이트 통계 보기"></td>
 		</tr>
 	</table>
