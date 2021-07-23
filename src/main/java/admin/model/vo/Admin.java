@@ -4,7 +4,24 @@ public class Admin {
 	private String adminId;
 	private String adminPwd;
 	private String adminName;
+	private String loginOk;
 	
+	public Admin(String adminId, String adminPwd, String adminName, String loginOk) {
+		super();
+		this.adminId = adminId;
+		this.adminPwd = adminPwd;
+		this.adminName = adminName;
+		this.loginOk = loginOk;
+	}
+
+	public String getLoginOk() {
+		return loginOk;
+	}
+
+	public void setLoginOk(String loginOk) {
+		this.loginOk = loginOk;
+	}
+
 	public Admin(){}
 	
 	public Admin(String adminId, String adminPwd, String adminName) {
@@ -41,7 +58,8 @@ public class Admin {
 
 	@Override
 	public String toString() {
-		return "Admin [adminId=" + adminId + ", adminPwd=" + adminPwd + ", adminName=" + adminName + "]";
+		return "Admin [adminId=" + adminId + ", adminPwd=" + adminPwd + ", adminName=" + adminName + ", loginOk="
+				+ loginOk + "]";
 	}
 	
 	
