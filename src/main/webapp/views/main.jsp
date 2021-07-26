@@ -43,8 +43,8 @@
 		<td><input type = "button" class = "button" onclick = "location.href = './community/communityList.jsp'" value = "커뮤니티 관리"></td>
 		</tr>
 		<tr>
-		<td><input type = "button" class = "button" onclick = "location.href = './community/communityList.jsp'" value = "바디웨이 총 게시물 관리"></td>
-		<td><input type = "button" class = "button" onclick = "location.href = './community/communityList.jsp'" value = "공지사항 및 QnA 관리"></td>
+		<td><input type = "button" class = "button" onclick = "location.href = './healthfood/healthfoodAdminListView.jsp'" value = "바디웨이 총 게시물 관리"></td>
+		<td><input type = "button" class = "button" onclick = "location.href = './notice/noticeListView.jsp'" value = "공지사항 및 QnA 관리"></td>
 		</tr>
 		<tr>
 		<td><input type = "button" class = "button" onclick = "location.href = './advertisement/advertisementList.jsp'" value = "홍보 업체 관리"></td>

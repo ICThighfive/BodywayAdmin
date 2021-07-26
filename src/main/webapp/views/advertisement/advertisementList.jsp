@@ -28,6 +28,7 @@
 	<tr><th></th><td></td><td></td><td></td></tr>
 	<tr><th></th><td></td><td></td><td></td></tr>
 </table>
+<input type = "button" value = "업체 등록하러 가기" onclick = "location.href='./enrollBusiness.jsp'">
 <hr>
 </body>
 </html>

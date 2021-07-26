@@ -2,40 +2,86 @@ package qna.model.vo;
 
 import java.sql.Date;
 
-public class Qna {
-	private int qnaNo;
-	private String userId;
-	private String qnaType;
-	private String qnaTitle;
-	private String qnaContent;
-	private java.sql.Date qnaDate;
-	private String qnaOriginalImage;
-	private String qnaRenameImage;
-	private char qnaopen; //���� ����
-	private int qnaPwd; //���� ���� ���� ��й�ȣ
-	private int qnaReadCount; //��ȸ��
-	private String adminId;
-	private int answerNo;
+public class Qna implements java.io.Serializable {
+	private static final long serialVersionUID = 1113L;
 	
-	public Qna(){}
-
-	public Qna(int qnaNo, String userId, String qnaType, String qnaTitle, String qnaContent, Date qnaDate,
-			String qnaOriginalImage, String qnaRenameImage, char qnaopen, int qnaPwd, int qnaReadCount, String adminId,
-			int answerNo) {
+	private int qnaNo; //글번호
+	// Question
+	private String userId; //작성자
+	private String qnaType; //질문유형
+	private String qqTitle; //글제목
+	private String qqContent; //글내용
+	private Date qqDate; //작성일
+	private String qqOriginalImage; //기존 파일명
+	private String qqRenameImage; //변경 파일명
+	private String qqOpen; //공개여부
+	private int qqPwd; //글 비밀번호
+	private int qqReadCount; //조회수
+	// Answer
+	private int qaNo; //답변 번호
+	private String adminId; //답변자
+	private String qaTitle; //답변제목
+	private String qaContent; //답변내욜
+	private Date qaDate; //작성일
+	private String qaOriginalImage; //기존 파일명
+	private String qaRenameImage; //변경 파일명
+	
+	public Qna() {}
+	
+	//Question
+	public Qna(int qnaNo, String userId, String qnaType, String qqTitle, String qqContent, Date qqDate,
+			String qqOriginalImage, String qqRenameImage, String qqOpen, int qqPwd, int qqReadCount) {
 		super();
 		this.qnaNo = qnaNo;
 		this.userId = userId;
 		this.qnaType = qnaType;
-		this.qnaTitle = qnaTitle;
-		this.qnaContent = qnaContent;
-		this.qnaDate = qnaDate;
-		this.qnaOriginalImage = qnaOriginalImage;
-		this.qnaRenameImage = qnaRenameImage;
-		this.qnaopen = qnaopen;
-		this.qnaPwd = qnaPwd;
-		this.qnaReadCount = qnaReadCount;
+		this.qqTitle = qqTitle;
+		this.qqContent = qqContent;
+		this.qqDate = qqDate;
+		this.qqOriginalImage = qqOriginalImage;
+		this.qqRenameImage = qqRenameImage;
+		this.qqOpen = qqOpen;
+		this.qqPwd = qqPwd;
+		this.qqReadCount = qqReadCount;
+	}
+
+	//Answer
+	public Qna(int qnaNo, int qaNo, String adminId, String qaTitle, String qaContent, Date qaDate,
+			String qaOriginalImage, String qaRenameImage) {
+		super();
+		this.qnaNo = qnaNo;
+		this.qaNo = qaNo;
 		this.adminId = adminId;
-		this.answerNo = answerNo;
+		this.qaTitle = qaTitle;
+		this.qaContent = qaContent;
+		this.qaDate = qaDate;
+		this.qaOriginalImage = qaOriginalImage;
+		this.qaRenameImage = qaRenameImage;
+	}
+
+	public Qna(int qnaNo, String userId, String qnaType, String qqTitle, String qqContent, Date qqDate,
+			String qqOriginalImage, String qqRenameImage, String qqOpen, int qqPwd, int qqReadCount, int qaNo,
+			String adminId, String qaTitle, String qaContent, Date qaDate, String qaOriginalImage,
+			String qaRenameImage) {
+		super();
+		this.qnaNo = qnaNo;
+		this.userId = userId;
+		this.qnaType = qnaType;
+		this.qqTitle = qqTitle;
+		this.qqContent = qqContent;
+		this.qqDate = qqDate;
+		this.qqOriginalImage = qqOriginalImage;
+		this.qqRenameImage = qqRenameImage;
+		this.qqOpen = qqOpen;
+		this.qqPwd = qqPwd;
+		this.qqReadCount = qqReadCount;
+		this.qaNo = qaNo;
+		this.adminId = adminId;
+		this.qaTitle = qaTitle;
+		this.qaContent = qaContent;
+		this.qaDate = qaDate;
+		this.qaOriginalImage = qaOriginalImage;
+		this.qaRenameImage = qaRenameImage;
 	}
 
 	public int getQnaNo() {
@@ -62,68 +108,76 @@ public class Qna {
 		this.qnaType = qnaType;
 	}
 
-	public String getQnaTitle() {
-		return qnaTitle;
+	public String getQqTitle() {
+		return qqTitle;
 	}
 
-	public void setQnaTitle(String qnaTitle) {
-		this.qnaTitle = qnaTitle;
+	public void setQqTitle(String qqTitle) {
+		this.qqTitle = qqTitle;
 	}
 
-	public String getQnaContent() {
-		return qnaContent;
+	public String getQqContent() {
+		return qqContent;
 	}
 
-	public void setQnaContent(String qnaContent) {
-		this.qnaContent = qnaContent;
+	public void setQqContent(String qqContent) {
+		this.qqContent = qqContent;
 	}
 
-	public java.sql.Date getQnaDate() {
-		return qnaDate;
+	public Date getQqDate() {
+		return qqDate;
 	}
 
-	public void setQnaDate(java.sql.Date qnaDate) {
-		this.qnaDate = qnaDate;
+	public void setQqDate(Date qqDate) {
+		this.qqDate = qqDate;
 	}
 
-	public String getQnaOriginalImage() {
-		return qnaOriginalImage;
+	public String getQqOriginalImage() {
+		return qqOriginalImage;
 	}
 
-	public void setQnaOriginalImage(String qnaOriginalImage) {
-		this.qnaOriginalImage = qnaOriginalImage;
+	public void setQqOriginalImage(String qqOriginalImage) {
+		this.qqOriginalImage = qqOriginalImage;
 	}
 
-	public String getQnaRenameImage() {
-		return qnaRenameImage;
+	public String getQqRenameImage() {
+		return qqRenameImage;
 	}
 
-	public void setQnaRenameImage(String qnaRenameImage) {
-		this.qnaRenameImage = qnaRenameImage;
+	public void setQqRenameImage(String qqRenameImage) {
+		this.qqRenameImage = qqRenameImage;
 	}
 
-	public char getQnaopen() {
-		return qnaopen;
+	public String getQqOpen() {
+		return qqOpen;
 	}
 
-	public void setQnaopen(char qnaopen) {
-		this.qnaopen = qnaopen;
+	public void setQqOpen(String qqOpen) {
+		this.qqOpen = qqOpen;
 	}
 
-	public int getQnaPwd() {
-		return qnaPwd;
+	public int getQqPwd() {
+		return qqPwd;
 	}
 
-	public void setQnaPwd(int qnaPwd) {
-		this.qnaPwd = qnaPwd;
+	public void setQqPwd(int qqPwd) {
+		this.qqPwd = qqPwd;
 	}
 
-	public int getQnaReadCount() {
-		return qnaReadCount;
+	public int getQqReadCount() {
+		return qqReadCount;
 	}
 
-	public void setQnaReadCount(int qnaReadCount) {
-		this.qnaReadCount = qnaReadCount;
+	public void setQqReadCount(int qqReadCount) {
+		this.qqReadCount = qqReadCount;
+	}
+
+	public int getQaNo() {
+		return qaNo;
+	}
+
+	public void setQaNo(int qaNo) {
+		this.qaNo = qaNo;
 	}
 
 	public String getAdminId() {
@@ -134,22 +188,59 @@ public class Qna {
 		this.adminId = adminId;
 	}
 
-	public int getAnswerNo() {
-		return answerNo;
+	public String getQaTitle() {
+		return qaTitle;
 	}
 
-	public void setAnswerNo(int answerNo) {
-		this.answerNo = answerNo;
+	public void setQaTitle(String qaTitle) {
+		this.qaTitle = qaTitle;
+	}
+
+	public String getQaContent() {
+		return qaContent;
+	}
+
+	public void setQaContent(String qaContent) {
+		this.qaContent = qaContent;
+	}
+
+	public Date getQaDate() {
+		return qaDate;
+	}
+
+	public void setQaDate(Date qaDate) {
+		this.qaDate = qaDate;
+	}
+
+	public String getQaOriginalImage() {
+		return qaOriginalImage;
+	}
+
+	public void setQaOriginalImage(String qaOriginalImage) {
+		this.qaOriginalImage = qaOriginalImage;
+	}
+
+	public String getQaRenameImage() {
+		return qaRenameImage;
+	}
+
+	public void setQaRenameImage(String qaRenameImage) {
+		this.qaRenameImage = qaRenameImage;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	@Override
 	public String toString() {
-		return "Qna [qnaNo=" + qnaNo + ", userId=" + userId + ", qnaType=" + qnaType + ", qnaTitle=" + qnaTitle
-				+ ", qnaContent=" + qnaContent + ", qnaDate=" + qnaDate + ", qnaOriginalImage=" + qnaOriginalImage
-				+ ", qnaRenameImage=" + qnaRenameImage + ", qnaopen=" + qnaopen + ", qnaPwd=" + qnaPwd
-				+ ", qnaReadCount=" + qnaReadCount + ", adminId=" + adminId + ", answerNo=" + answerNo + "]";
+		return "Qna [qnaNo=" + qnaNo + ", userId=" + userId + ", qnaType=" + qnaType + ", qqTitle=" + qqTitle
+				+ ", qqContent=" + qqContent + ", qqDate=" + qqDate + ", qqOriginalImage=" + qqOriginalImage
+				+ ", qqRenameImage=" + qqRenameImage + ", qqOpen=" + qqOpen + ", qqPwd=" + qqPwd + ", qqReadCount="
+				+ qqReadCount + ", qaNo=" + qaNo + ", adminId=" + adminId + ", qaTitle=" + qaTitle + ", qaContent="
+				+ qaContent + ", qaDate=" + qaDate + ", qaOriginalImage=" + qaOriginalImage + ", qaRenameImage="
+				+ qaRenameImage + "]";
 	}
 	
 	
-
 }
