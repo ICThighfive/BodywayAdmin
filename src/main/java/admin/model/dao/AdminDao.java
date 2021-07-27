@@ -32,7 +32,6 @@ public class AdminDao {
 				admin.setAdminId(adminId);
 				admin.setAdminName(rset.getString("admin_name"));
 				admin.setAdminPwd(adminPwd);
-				admin.setLoginOk(rset.getString("login_ok"));
 			}
 			
 		} catch (Exception e) {

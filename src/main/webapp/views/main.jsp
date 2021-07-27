@@ -40,7 +40,7 @@
 	<table align = center>
 		<tr>
 		<td><input type = "button" class = "button" onclick = "location.href = './member/memberList.jsp'" value = "회원 관리"></td>
-		<td><input type = "button" class = "button" onclick = "location.href = './community/communityList.jsp'" value = "커뮤니티 관리"></td>
+		<td><input type = "button" class = "button" onclick = "location.href = '/semiad/community.ad'" value = "커뮤니티 관리"></td> <!-- community.controller로 이동 -->
 		</tr>
 		<tr>
 		<td><input type = "button" class = "button" onclick = "location.href = './healthfood/healthfoodAdminListView.jsp'" value = "바디웨이 총 게시물 관리"></td>

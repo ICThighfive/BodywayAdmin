@@ -12,6 +12,6 @@
 <%} else{ %>
 <h3>Servlet 오류 메세지 : <%= request.getAttribute("message") %></h3>
 <%} %>
-<a href = "/semiad/index.jsp">시작 페이지로 가기</a>
+<a href = "/semiad/views/main.jsp">시작 페이지로 가기</a>
 </body>
 </html>

@@ -11,16 +11,9 @@ public class Admin {
 		this.adminId = adminId;
 		this.adminPwd = adminPwd;
 		this.adminName = adminName;
-		this.loginOk = loginOk;
 	}
 
-	public String getLoginOk() {
-		return loginOk;
-	}
 
-	public void setLoginOk(String loginOk) {
-		this.loginOk = loginOk;
-	}
 
 	public Admin(){}
 	
@@ -58,8 +51,7 @@ public class Admin {
 
 	@Override
 	public String toString() {
-		return "Admin [adminId=" + adminId + ", adminPwd=" + adminPwd + ", adminName=" + adminName + ", loginOk="
-				+ loginOk + "]";
+		return "Admin [adminId=" + adminId + ", adminPwd=" + adminPwd + ", adminName=" + adminName + "]";
 	}
 	
 	

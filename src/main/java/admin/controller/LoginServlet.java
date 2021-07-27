@@ -73,7 +73,7 @@ public class LoginServlet extends HttpServlet {
 			//세션 값 보내기
 			session.setAttribute("loginAdmin", admin);
 			
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("/semiad/views/main.jsp");
 		}else {
 			RequestDispatcher view = request.getRequestDispatcher("views/common/error.jsp");
 			
